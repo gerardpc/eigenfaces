@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "eigenheroes"
+name = "eigenfaces"
 version = "0.1.0"
 description = ""
 authors = ["Irene Alda"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.11"
 numpy = "^1.26.2"
 matplotlib = "^3.8.2"
 scipy = "^1.11.4"
