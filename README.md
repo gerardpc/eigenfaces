@@ -17,7 +17,7 @@ poetry install
 
 ## Usage
 
-Run the script `eigenfaces_script.py` from the eigenfaces folder  
+Run the script `eigenfaces_script.py` from the eigenfaces folder
 to see an example of the algorithm in action. The script will load the
 faces from the `data` folder, and then perform the following steps:
 
