@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from eigenfaces.eigenfaces_lib import images_to_A, plot_eigenfaces, plot_projections, project_image
 
-People that will be used
+# People that will be used
 people = {"person_1": "stallone", "person_2": "taylor"}
 test_imgs = {
     "person_1": "faces/teststallone1.jpg",
