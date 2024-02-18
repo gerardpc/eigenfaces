@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple implementation of the Eigenfaces algorithm for face recognition. 
+This is a simple Python implementation of the Eigenfaces algorithm for face recognition. 
 It is based on the paper [Eigenfaces for Recognition](http://www.face-rec.org/algorithms/pca/jcn.pdf) by Turk and 
 Pentland, and follows the formulation given in a lecture by Steven Brunton from the University of Washington.
 
