@@ -1,15 +1,26 @@
 """This script is used to run the eigenfaces algorithm."""
 import matplotlib.pyplot as plt
 import numpy as np
-from eigenfaces_lib import images_to_A, plot_eigenfaces, plot_projections, project_image
+from eigenfaces.eigenfaces_lib import images_to_A, plot_eigenfaces, plot_projections, project_image
 
-# People that will be used
+People that will be used
 people = {"person_1": "stallone", "person_2": "taylor"}
-
 test_imgs = {
     "person_1": "faces/teststallone1.jpg",
     "person_2": "faces/testtaylor1.jpg",
 }
+
+# people = {"person_1": "stallone", "person_2": "arnold"}
+# test_imgs = {
+#     "person_1": "faces/teststallone1.jpg",
+#     "person_2": "faces/testterminator2.jpg",
+# }
+
+# people = {"person_1": "arnold", "person_2": "taylor"}
+# test_imgs = {
+#     "person_1": "faces/teststallone1.jpg",
+#     "person_2": "faces/testtaylor1.jpg",
+# }
 # Images pixel dimensions
 m = 200
 n = 175
@@ -49,6 +60,10 @@ plt.show()
 # starting at start_ef
 PER_1 = (A_centered[:, :N].T @ Phi[:, start_ef : start_ef + 3]).T
 PER_2 = (A_centered[:, N : 2 * N].T @ Phi[:, start_ef : start_ef + 3]).T
+
+# plot in 1D
+plot_projections(num_dim=1, start_ef=start_ef, PER_1=PER_1, PER_2=PER_2, people=people)
+plt.show()
 
 # plot in 2D
 plot_projections(num_dim=2, start_ef=start_ef, PER_1=PER_1, PER_2=PER_2, people=people)

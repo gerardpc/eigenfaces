@@ -123,7 +123,17 @@ def plot_projections(
             that gets projected. Eigenfaces used will be
             [start_ef:start_ef + num_dim]
     """
-    if num_dim == 2:
+    if num_dim == 1:
+        # 1 components plot
+        fig = plt.figure()
+        ax = fig.add_subplot()
+        ax.scatter(PER_1[0, :], 0*PER_1[1, :], c="r", label=people["person_1"])
+        ax.scatter(PER_2[0, :], 0*PER_2[1, :], c="b", label=people["person_2"])
+        ax.set_xlabel(f"eigenface {start_ef + 1}")
+        ax.set_ylabel(f"eigenface {start_ef + 2}")
+        ax.set_title("1D projection on 1 eigenface")
+        ax.legend()
+    elif num_dim == 2:
         # 2 components plot
         fig = plt.figure()
         ax = fig.add_subplot()
@@ -150,6 +160,6 @@ def plot_projections(
         ax.set_title("3D projection on 3 eigenfaces")
         ax.legend()
     else:
-        print("The number of dimensions must be 2 or 3.")
+        print("The number of dimensions must be 1, 2 or 3.")
         return
     return ax
