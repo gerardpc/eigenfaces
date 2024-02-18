@@ -22,6 +22,7 @@ to see an example of the algorithm in action. The script will load the
 faces from the `data` folder, and then perform the following steps:
 
 1. Calculate SVD of the data matrix (i.e. the matrix whose columns are the flattened images).
-2. Calculate the eigenfaces by multiplying the right singular vectors with the data matrix.
-3. Project the faces onto the eigenfaces.
+2. The eigenfaces are the left singular vectors of the data matrix, reshaped to the original image size
+   (i.e., unflattened).
+3. Project new faces onto the eigenfaces.
 
